@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Send heartbeat to QuietPulse
-        uses: vadyak/quietpulse-actions/heartbeat@v1
+        uses: vadyak/quietpulse-actions/heartbeat@master
         with:
           endpoint_token: 4c88ccecbe3ef15b6bb8d69f490707d0
           grace_period_minutes: 5
