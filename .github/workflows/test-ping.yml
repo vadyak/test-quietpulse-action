@@ -1,0 +1,20 @@
+name: Test QuietPulse Heartbeat
+
+on:
+  workflow_dispatch:  # Запускаем вручную
+  push:
+    branches: [ main ]
+
+jobs:
+  test-heartbeat:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Send heartbeat to QuietPulse
+        uses: vadyak/quietpulse-actions/heartbeat@v1
+        with:
+          endpoint_token: 4c88ccecbe3ef15b6bb8d69f490707d0
+          grace_period_minutes: 5
+          timeout_seconds: 10
